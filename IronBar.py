@@ -1,25 +1,21 @@
 import sys
 str_stick = sys.stdin.readline().rstrip()
 
-count, store, temp = 0, 0, 0
+def Solve(str_stick):
+    stick = 0
+    count = 0
 
-for i in range(len(str_stick)):
-    if i == len(str_stick)-1:
-        continue
-    if str_stick[i] == "(" and str_stick[i+1]=="(":
-        count += 1
-        if temp == 1:
-            continue
-        temp += 1
-    elif str_stick[i] == "(" and str_stick[i+1] == ")":
-        temp = 0
-        store += count
-    elif str_stick[i] == ")" and str_stick[i+1] == ")":
-        store += 1
-        count -= 1
-        temp = 0
-    else:
-        continue
+    for i in range(len(str_stick)):
+        if str_stick[i] == "(":
+            stick +=1
+        else:
+            stick -= 1
+            count += stick if str_stick[i-1]=="(" else 1
+    
+    return count
 
-        
-print(store)
+ans = -1
+
+ans = Solve(str_stick)
+
+print(ans)
