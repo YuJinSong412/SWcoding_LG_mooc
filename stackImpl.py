@@ -15,7 +15,7 @@ def Solve():
 			if len(stack) == 0 :
 				print("E")
 			else:
-				print(stack.pop())
+				print(stack[-1])
 				stack.pop()
 		elif cmd[0] == 1:
 			stack.append(cmd[1])
