@@ -70,27 +70,3 @@ sol = Solve()
 # sol = Solve_2()
 print(sol)
 
-
-
-
-
-
-# import sys
-
-
-# def Input_Data():
-# 	readl = sys.stdin.readline
-# 	N = int(readl())
-# 	pos = [int(readl()) for _ in range(N)]
-# 	return N, pos
-
-
-# sol = -1
-# # 입력받는 부분
-# N, pos = Input_Data()
-
-# # 여기서부터 작성
-
-
-# # 출력하는 부분
-# print(sol)
